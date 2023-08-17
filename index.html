@@ -1,0 +1,159 @@
+<!DOCTYPE html >
+<html lang="en" data-theme="night">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Ecommerce Website</title>
+    <!-- use others livery or frame work -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="alert alert-success">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    <div class="flex justify-between gap-10">
+      <h1>Get Discount offer 60% </h1>
+      <h1 >Promo Code is :  Discount12</h1>
+    </div>
+  </div>
+   <main class=" max-w-screen-xl mx-auto px-5">
+    <section class="py-10">
+        <div class="heading">
+            <nav>
+                <div class="navbar bg-base-100 bg-slate-500 rounded-2xl shadow-lg p-5 mb-10">
+                    <div class="flex-1">
+                      <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    </div>
+                    <div class="flex-none">
+                      <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle">
+                          <div class="indicator">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            <span id="product-number" class="badge badge-sm indicator-item"> 0
+                            </span>
+                          </div>
+                        </label>
+                        <div tabindex="0" class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
+                          <div class="card-body">
+                            <h1 class="font-bold text-lg">Items <span id="item-set"  class="font-bold text-lg">0</span></h1>
+                            <h1 class="text-info">Subtotal: $<span id="total-balence" class="text-info">00</span></h1>
+                            <div class="card-actions">
+                              <!-- You can open the modal using ID.showModal() method -->
+                              <button class="btn" onclick="my_modal_4.showModal()">Viwe Card</button>
+                              <dialog id="my_modal_4" class="modal">
+                                <form method="dialog" class="modal-box w-11/12 max-w-5xl">
+                                  <!-- Cheek Card Container  -->
+                                  <div id="carad-container" class="card-cotainer">
+                                      
+                                  </div>
+
+                                  <div class="modal-action">
+                                    <!-- if there is a button, it will close the modal -->
+                                    <input type="text" placeholder="Type promo Code" class="input input-bordered input-accent" />
+                                    <button class="btn">Submit</button>
+                                    <button class="btn">Close</button>
+                                  </div>
+                                </form>
+                              </dialog>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                          <div class="w-10 rounded-full">
+                            <img src="./products/043a83d66c05309337565b63d0d58557.jpg" />
+                          </div>
+                        </label>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                          <li>
+                            <a class="justify-between">
+                              Profile
+                              <span class="badge">New</span>
+                            </a>
+                          </li>
+                          <li><a>Settings</a></li>
+                          <li><a>Logout</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+            </nav>
+            <h2 class="text-center text-3xl text-white font-semibold">Product Page</h2>
+        </div>
+    </section>
+    <section>
+        <div class="shope-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="./products/0534eb6b396f8bd8d8aa61d1abaefbe8.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Shoes!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-between">
+                     <h2 class="text-white text-2xl font-bold uppercase"> $<span id="product-price1" class="text-white text-2xl font-bold uppercase">234</span></h2>
+                    <button id="buynow-btn1" class="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="./products/359e4e31ef8f96c8a26c470093180185.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Shoes!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-between">
+                    <h2 class="text-white text-2xl font-bold uppercase"> $<span id="product-price1" class="text-white text-2xl font-bold uppercase">234</span></h2>
+                   <button id="buynow-btn2" class="btn btn-primary">Buy Now</button>
+                 </div>
+               </div>
+              </div>
+              <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="./products/afc27486af8245856151888181660bb5.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Shoes!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-between">
+                    <h2 class="text-white text-2xl font-bold uppercase"> $<span id="product-price1" class="text-white text-2xl font-bold uppercase">234</span></h2>
+                   <button id="buynow-btn3" class="btn btn-primary">Buy Now</button>
+                 </div>
+               </div>
+              </div>
+              <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="./products/c85298f29877bbb5d80a894775f7d99d.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Shoes!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-between">
+                    <h2 class="text-white text-2xl font-bold uppercase"> $<span id="product-price1" class="text-white text-2xl font-bold uppercase">234</span></h2>
+                   <button id="buynow-btn4" class="btn btn-primary">Buy Now</button>
+                 </div>
+               </div>
+              </div>
+              <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="./products/043a83d66c05309337565b63d0d58557.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Shoes!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-between">
+                    <h2 class="text-white text-2xl font-bold uppercase"> $<span id="product-price1" class="text-white text-2xl font-bold uppercase">234</span></h2>
+                   <button id="buynow-btn5" class="btn btn-primary">Buy Now</button>
+                 </div>
+               </div>
+              </div>
+              <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img src="./products/359e4e31ef8f96c8a26c470093180185.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Shoes!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-between">
+                    <h2 class="text-white text-2xl font-bold uppercase"> $<span id="product-price1" class="text-white text-2xl font-bold uppercase">234</span></h2>
+                   <button id="buynow-btn6" class="btn btn-primary">Buy Now</button>
+                 </div>
+                </div>
+              </div>
+        </div>
+    </section>
+   </main>
+   <script src="./function.js"></script>
+<script src="./apps.js"></script>
+</body>
+</html>
