@@ -14,6 +14,7 @@ document.getElementById('buynow-btn1').addEventListener('click',function () {
 
    addproductInCard("carad-container",getNewProductValue,updateProductNumber);
 
+
 })
 document.getElementById('buynow-btn2').addEventListener('click',function () {
     
@@ -47,8 +48,8 @@ document.getElementById('buynow-btn4').addEventListener('click',function () {
    const getNewProductValue = getElementValue('product-price1');
    const updatePrice = getTotalPreviusBalence + getNewProductValue;
    upDateNewprice('total-balence',updatePrice)
-   addproductInCard("carad-container",getNewProductValue,updateProductNumber);
    const updateProductNumber = productNumber ++ ;
+   addproductInCard("carad-container",getNewProductValue,updateProductNumber);
 
    upDateNewprice('product-number',updateProductNumber);
    upDateNewprice('item-set',updateProductNumber);
@@ -80,6 +81,13 @@ document.getElementById('buynow-btn6').addEventListener('click',function () {
    upDateNewprice('item-set',updateProductNumber);
 
 })
+
+document.getElementById('disocunt-offer').addEventListener('click', function () {
+   const updateProductNumber = productNumber++; // Assuming you have defined productNumber
+   const getNewProductValue = getElementValue('product-price1'); // Assuming you have the getElementValue function
+   const getTotalPreviusBalence = getElementValue('total-balence'); // Assuming you have the getElementValue function
+   const setPriceDiscount = discountProduct('Discount-code', getNewProductValue, updateProductNumber,getTotalPreviusBalence);
+});
 
 
 

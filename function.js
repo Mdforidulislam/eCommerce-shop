@@ -24,11 +24,36 @@ function addproductInCard(cardId,ProductPrice,QuantityProduct) {
    getCardSection.appendChild(creatSum);
 }
 
-function discountProcut(discountcode ,remainBalence) {
+function discountProduct(discountcode, productPrice, quantity,totalPrice) {
    const discountValue = document.getElementById(discountcode).value;
-   const convertValue = parseInt(discountValue);
+   const convertValue = discountValue.trim();
 
    if (convertValue === 'Discount12') {
-      
+       const getTotalPrice = document.getElementById('carad-container');
+       const getChild = getTotalPrice.lastChild;
+       const getTrim = getChild.textContent.trim();
+       const getNumber = getTrim.split(' ');
+       const getValue = parseFloat(getNumber[4]);
+       
+       const discount = (60 / 100) * productPrice;
+       const discountPrice = productPrice - discount;
+       const totalQuantityPrice = quantity * discountPrice;
+       const remainBalce = totalPrice - totalQuantityPrice;
+
+       const createElement = document.createElement('h1');
+       createElement.innerText ="Discount Price : " + totalQuantityPrice;
+       const createElement2 = document.createElement('h2');
+       createElement2.innerText = " Need to Payment Total Price : " + remainBalce;
+
+       const getBalenceElement = document.getElementById("total-balence");
+       const discountBalce = getValue - totalQuantityPrice;
+       getBalenceElement.textContent = discountBalce;
+       
+
+
+       getChild.appendChild(createElement);
+       getChild.appendChild(createElement2);
+
+       document.getElementById(discountcode).value = '';
    }
 }
